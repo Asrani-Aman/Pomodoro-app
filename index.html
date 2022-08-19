@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POMODORO APP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3d952996ea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="head">POMODORO</h1>
+    </header>
+    <main>
+        <nav>
+            <div class="navbar">
+                <div class="pomodoro nav-item">Pomodoro</div>
+                <div class="short-break nav-item">Short-break</div>
+                <div class="long-break nav-item">Long-Break</div>
+            </div>
+        </nav>
+        <section class="app">
+            <div class="timer">
+                <div class="circle">
+                    <div class="circle-2">
+                        <div class="time">
+                            <p class="timer_label" id="timer_label"></p>
+                        </div>
+                        <div class="button">
+                            <button class="timer_pause"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="settings">
+                <i class="fa-solid fa-gear icon"></i>
+
+            </div>
+
+        </section>
+        <!-- HIDDEN SETTINGS WINDOW -->
+
+        <div class="modal hidden">
+            <!-- SETTINGS NAVBAR -->
+            <nav class="nav-settings">
+                <p class="nav-head">Settings</p>
+                <button class="close-modal">&times;</button>
+            </nav>
+            <main class="main-settings">
+                <!-- TIMER SETTINGS -->
+                <p class="nav-time-head">TIME(MINUTES)</p>
+                <div class="timer-settings">
+
+                    <div class="form-element">
+                        <label for="pomodoro" class="form-label">pomodoro</label>
+                        <input type="number" name="pomodoro" class="form-input" placeholder="25" value="25"
+                            id="pomodoroInput" />
+                    </div>
+                    <div class="form-element">
+                        <label for="short" class="form-label">short</label>
+                        <input type="number" name="short" class="form-input" placeholder="5" value="5"
+                            id="shortInput" />
+                    </div>
+                    <div class="form-element">
+                        <label for="long" class="form-label">long</label>
+                        <input type="number" name="long" class="form-input" placeholder="15" value="15"
+                            id="longInput" />
+                    </div>
+                </div>
+                <!-- FONT-SETTINGS -->
+
+                <div class="font-settings">
+                    <p class="font">FONTS</p>
+                    <div class=" font-design">
+                        <div class="fonts" id="font_1" data-font="Fredoka" style="font-family:'Fredoka', sans-serif">
+                            Aa
+                        </div>
+                        <div class="fonts" id="font_2" data-font="Roboto" style="font-family:'Roboto', sans-serif">Aa
+                        </div>
+                        <div data-font="Poppins" class="fonts" id="font_3" style="font-family:'Poppins', sans-serif">Aa
+                        </div>
+                    </div>
+                </div>
+
+                <!-- THEMES-SETTINGS -->
+                <div class="theme-settings">
+                    <div class="theme-head">
+                        <p> Color</p>
+                    </div>
+                    <div class="themes">
+                        <div class="theme-1" data-theme="#fb6f70"></div>
+                        <div class="theme-2" data-theme="#6ff3fa"></div>
+                        <div class="theme-3" data-theme="#d981f8"></div>
+                    </div>
+
+                </div>
+            </main>
+            <footer>
+                <button class="apply-btn" id="apply-btn">APPLY</button>
+            </footer>
+
+        </div>
+        <div class="overlay hidden"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
